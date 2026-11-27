@@ -6,9 +6,9 @@ AI automation engineer from Dunaújváros, Hungary. I build Claude-powered syste
 
 | Project | What it is | Status |
 |---|---|---|
-| [Industrial AI integration](deak-ai-integration/) | AI integration for a Valmet-certified valve service company: service reports, diagnostics, shutdown logistics, spare parts, documentation | In progress |
+| [Industrial AI integration](deak-ai-integration/) | AI integration for a Valmet-certified valve service company: service reports, diagnostics, shutdown logistics, spare parts, documentation | Planned |
 | [E-commerce research and ads maker](ecommerce-research-ads/) | Open-source Claude toolkit for dropshipping and private label sellers: product research, ad scripts, video ads, scheduling | Research and ad maker working |
-| [n8n AI receptionist](n8n-ai-receptionist/) | AI-based automated telephone receptionist and concierge built on n8n (university research) | Research done, templates being published |
+| [n8n AI receptionist](n8n-ai-receptionist/) | AI phone receptionist and concierge built on n8n (university research), with an importable hotel example | Example workflow published |
 | [APEX](https://github.com/zsolteo/APEX.) | Personal performance operating system: WHOOP and YAZIO data, training, recovery, nutrition, business output | Active |
 | [Obsidian HQ template](obsidian-hq-template/) | A vault where Claude, ChatGPT, Higgsfield and Buffer all work on the same notes | Ready to use |
 | [Content automations](content-automations/) | Remotion video pipeline, clip tools, a dashboard and the "Wise time in my life" animated series | Being moved in |

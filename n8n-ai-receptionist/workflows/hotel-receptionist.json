@@ -1,0 +1,154 @@
+{
+  "name": "AI Hotel Receptionist (Grand Danube Hotel example)",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "hotel-receptionist",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "a1b2c3d4-0001-4000-8000-000000000001",
+      "name": "Incoming call (voice provider webhook)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [0, 300],
+      "webhookId": "hotel-receptionist"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.body.transcript }}",
+        "options": {
+          "systemMessage": "You are the AI phone receptionist of the Grand Danube Hotel, a 4-star city hotel. Speak in the caller's language (English or Hungarian). Keep every answer under 3 short sentences, because it is read aloud on the phone.\n\nYou can:\n- answer questions about the hotel using the Hotel FAQ tool (check-in 15:00, check-out 11:00, parking, breakfast, spa, airport transfer);\n- check room availability and prices with the Check availability tool;\n- create a booking with the Create booking tool, only after repeating the dates, room type, guest name and phone number back to the caller and getting a clear yes;\n- hand over to a human with the Transfer to front desk tool for complaints, payments, group bookings or anything you are unsure about.\n\nNever invent prices, availability or policies. Never take card numbers on the phone; say the front desk will send a secure payment link."
+        }
+      },
+      "id": "a1b2c3d4-0002-4000-8000-000000000002",
+      "name": "Receptionist agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [320, 300]
+    },
+    {
+      "parameters": {
+        "model": "claude-sonnet-5-5",
+        "options": { "maxTokensToSample": 400, "temperature": 0.3 }
+      },
+      "id": "a1b2c3d4-0003-4000-8000-000000000003",
+      "name": "Claude",
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.3,
+      "position": [160, 540],
+      "credentials": { "anthropicApi": { "id": "REPLACE_ME", "name": "Anthropic account" } }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $json.body.call_id }}",
+        "contextWindowLength": 20
+      },
+      "id": "a1b2c3d4-0004-4000-8000-000000000004",
+      "name": "Call memory",
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [320, 540]
+    },
+    {
+      "parameters": {
+        "toolDescription": "Hotel FAQ. Input: the guest's question. Returns the matching answer from the hotel's FAQ sheet.",
+        "method": "GET",
+        "url": "https://YOUR-HOTEL-API.example.com/faq",
+        "sendQuery": true,
+        "parametersQuery": { "values": [ { "name": "q", "valueProvider": "modelRequired" } ] }
+      },
+      "id": "a1b2c3d4-0005-4000-8000-000000000005",
+      "name": "Hotel FAQ",
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [480, 540]
+    },
+    {
+      "parameters": {
+        "toolDescription": "Check availability. Inputs: check_in (YYYY-MM-DD), check_out (YYYY-MM-DD), guests (number), room_type (single, double, suite or any). Returns free rooms and nightly prices.",
+        "method": "GET",
+        "url": "https://YOUR-HOTEL-API.example.com/availability",
+        "sendQuery": true,
+        "parametersQuery": {
+          "values": [
+            { "name": "check_in", "valueProvider": "modelRequired" },
+            { "name": "check_out", "valueProvider": "modelRequired" },
+            { "name": "guests", "valueProvider": "modelRequired" },
+            { "name": "room_type", "valueProvider": "modelRequired" }
+          ]
+        }
+      },
+      "id": "a1b2c3d4-0006-4000-8000-000000000006",
+      "name": "Check availability",
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [640, 540]
+    },
+    {
+      "parameters": {
+        "toolDescription": "Create booking. Use ONLY after the caller confirmed all details. Inputs: guest_name, phone, check_in, check_out, room_type, guests, notes.",
+        "method": "POST",
+        "url": "https://YOUR-HOTEL-API.example.com/bookings",
+        "sendBody": true,
+        "parametersBody": {
+          "values": [
+            { "name": "guest_name", "valueProvider": "modelRequired" },
+            { "name": "phone", "valueProvider": "modelRequired" },
+            { "name": "check_in", "valueProvider": "modelRequired" },
+            { "name": "check_out", "valueProvider": "modelRequired" },
+            { "name": "room_type", "valueProvider": "modelRequired" },
+            { "name": "guests", "valueProvider": "modelRequired" },
+            { "name": "notes", "valueProvider": "modelOptional" }
+          ]
+        }
+      },
+      "id": "a1b2c3d4-0007-4000-8000-000000000007",
+      "name": "Create booking",
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [800, 540]
+    },
+    {
+      "parameters": {
+        "toolDescription": "Transfer to front desk. Use for complaints, payments, group bookings or anything uncertain. Input: reason (short summary for the human).",
+        "method": "POST",
+        "url": "https://YOUR-VOICE-PROVIDER.example.com/transfer",
+        "sendBody": true,
+        "parametersBody": { "values": [ { "name": "reason", "valueProvider": "modelRequired" } ] }
+      },
+      "id": "a1b2c3d4-0008-4000-8000-000000000008",
+      "name": "Transfer to front desk",
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [960, 540]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { \"reply\": $json.output } }}",
+        "options": {}
+      },
+      "id": "a1b2c3d4-0009-4000-8000-000000000009",
+      "name": "Speak reply",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [700, 300]
+    }
+  ],
+  "connections": {
+    "Incoming call (voice provider webhook)": { "main": [[{ "node": "Receptionist agent", "type": "main", "index": 0 }]] },
+    "Receptionist agent": { "main": [[{ "node": "Speak reply", "type": "main", "index": 0 }]] },
+    "Claude": { "ai_languageModel": [[{ "node": "Receptionist agent", "type": "ai_languageModel", "index": 0 }]] },
+    "Call memory": { "ai_memory": [[{ "node": "Receptionist agent", "type": "ai_memory", "index": 0 }]] },
+    "Hotel FAQ": { "ai_tool": [[{ "node": "Receptionist agent", "type": "ai_tool", "index": 0 }]] },
+    "Check availability": { "ai_tool": [[{ "node": "Receptionist agent", "type": "ai_tool", "index": 0 }]] },
+    "Create booking": { "ai_tool": [[{ "node": "Receptionist agent", "type": "ai_tool", "index": 0 }]] },
+    "Transfer to front desk": { "ai_tool": [[{ "node": "Receptionist agent", "type": "ai_tool", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" },
+  "pinData": {}
+}

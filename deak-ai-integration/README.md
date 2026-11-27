@@ -1,10 +1,10 @@
 # Industrial AI integration — valve service and maintenance
 
-AI integration for D.E.Á.K. Irányítástechnikai Kft. (Dunaújváros, Hungary). The company is the exclusive Hungarian distributor and Authorized Service Partner for Valmet flow control products (Neles, Jamesbury, Flowrox). It services control, shut-off and emergency shutdown valves for refining, chemicals, energy, pulp and paper, hydrogen and Power-to-X plants.
+Planned AI integration for D.E.Á.K. Irányítástechnikai Kft. (Dunaújváros, Hungary). The company is the exclusive Hungarian distributor and Authorized Service Partner for Valmet flow control products (Neles, Jamesbury, Flowrox). It services control, shut-off and emergency shutdown valves for refining, chemicals, energy, pulp and paper, hydrogen and Power-to-X plants.
 
-This folder holds the reusable, client-neutral parts of the work. Client data, prices and internal processes are never committed here.
+This folder will hold the reusable, client-neutral parts of the work. Client data, prices and internal processes are never committed here.
 
-## Problems being solved
+## Problems I will solve
 
 | Area | Problem | Claude-based solution |
 |---|---|---|
@@ -23,4 +23,4 @@ This folder holds the reusable, client-neutral parts of the work. Client data, p
 
 ## Status
 
-In progress (started November 2026).
+Planned. Work starts in the coming months.
