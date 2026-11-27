@@ -1,0 +1,189 @@
+{
+  "product": "Smart jump rope with counter",
+  "ads": [
+    {
+      "lang": "en",
+      "angle": "Morning cardio in 10 minutes with the screen counting jumps and calories",
+      "hook": "Your morning routine needs a 10-minute cardio hit. This is it.",
+      "shots": [
+        {
+          "seconds": "0-2",
+          "visual": "Bright morning bedroom. A woman in workout clothes snaps the jump rope taut toward the camera. Close-up of the handle counter reading 0.",
+          "voiceover": "Your morning routine needs a 10-minute cardio hit. This is it.",
+          "on_screen_text": "10 minutes. No gym."
+        },
+        {
+          "seconds": "2-6",
+          "visual": "Quick cuts: alarm turned off, sneakers tied, rope pulled out of a drawer.",
+          "voiceover": "No gym, no commute. Just a little clear floor space.",
+          "on_screen_text": "Just you + a rope"
+        },
+        {
+          "seconds": "6-13",
+          "visual": "Side angle of her jumping at a steady pace. Cut to a close-up of the LCD counter ticking up.",
+          "voiceover": "The counter on the handle tracks your jumps and shows an estimated calorie burn. No app to pair.",
+          "on_screen_text": "Counts jumps for you (calories = estimate)"
+        },
+        {
+          "seconds": "13-19",
+          "visual": "She sets a goal, jumps until the counter reaches it, then smiles and breathes out. A coffee maker is running in the background.",
+          "voiceover": "Set a goal, jump until you hit it. Done before the coffee is ready.",
+          "on_screen_text": "Goal hit ✅"
+        },
+        {
+          "seconds": "19-24",
+          "visual": "Product flat on a table next to a water bottle. Text overlay appears.",
+          "voiceover": "Use it on a flat, non-slip surface with enough ceiling room. Ready to start your morning?",
+          "on_screen_text": "Tap the link to get yours"
+        }
+      ],
+      "caption": "A simple 10-minute morning routine, with the counter keeping score. Use it on a flat, non-slip surface with enough ceiling height. Calorie numbers are estimates.",
+      "hashtags": [
+        "#jumprope",
+        "#morningroutine",
+        "#homeworkout",
+        "#cardioathome",
+        "#fitnessgadget"
+      ],
+      "cta": "Tap the link to get your smart jump rope."
+    },
+    {
+      "lang": "en",
+      "angle": "Satisfying visual of the counter hitting a goal, suited to a challenge format",
+      "hook": "Watch this counter hit the goal.",
+      "shots": [
+        {
+          "seconds": "0-2",
+          "visual": "Extreme close-up of the LCD counter climbing quickly toward a target number, with the rope blurring behind it.",
+          "voiceover": "Watch this counter hit the goal.",
+          "on_screen_text": "Wait for it..."
+        },
+        {
+          "seconds": "2-7",
+          "visual": "Pull back to show a woman in a living room setting the goal to 300 jumps. She starts jumping.",
+          "voiceover": "Challenge time. Three hundred jumps. Let's see if I can do it.",
+          "on_screen_text": "Challenge: 300 jumps"
+        },
+        {
+          "seconds": "7-15",
+          "visual": "Time-lapse style cuts of her jumping, with the counter overlay climbing in the corner: 100, 200, 250.",
+          "voiceover": "The counter keeps track so you don't have to count in your head.",
+          "on_screen_text": "100... 200... 250..."
+        },
+        {
+          "seconds": "15-20",
+          "visual": "The counter hits 300. She stops, laughs, and holds the handle up to the camera.",
+          "voiceover": "And that's the goal. That little number is weirdly satisfying.",
+          "on_screen_text": "300 ✅"
+        },
+        {
+          "seconds": "20-25",
+          "visual": "She points at the camera, then the screen. Product shot on the floor.",
+          "voiceover": "Your turn. Pick a number and try it. Use a flat surface with room overhead.",
+          "on_screen_text": "Your turn. Link below."
+        }
+      ],
+      "caption": "Pick a number, hit the goal, repeat. Which number are you trying first? Use on a flat surface with enough ceiling room.",
+      "hashtags": [
+        "#jumpropechallenge",
+        "#fitnesschallenge",
+        "#satisfying",
+        "#homecardio",
+        "#gadgets"
+      ],
+      "cta": "Tap the link and start your own jump challenge."
+    },
+    {
+      "lang": "hu",
+      "angle": "Satisfying visual of the counter hitting a goal, suited to a challenge format",
+      "hook": "Nézd, ahogy a számláló eléri a célt.",
+      "shots": [
+        {
+          "seconds": "0-2",
+          "visual": "Extrém közeli kép az LCD számlálóról, ahogy gyorsan közelít a célszámhoz. A kötél elmosódva forog mögötte.",
+          "voiceover": "Nézd, ahogy a számláló eléri a célt.",
+          "on_screen_text": "Várd ki a végét..."
+        },
+        {
+          "seconds": "2-7",
+          "visual": "Kitávolodás: egy nő a nappaliban 300 ugrásra állítja a célt, és elkezd ugrálni.",
+          "voiceover": "Kihívás! Háromszáz ugrás. Vajon meglesz?",
+          "on_screen_text": "Kihívás: 300 ugrás"
+        },
+        {
+          "seconds": "7-15",
+          "visual": "Gyorsított vágások az ugrálásról. A sarokban látszik a számláló: 100, 200, 250.",
+          "voiceover": "A számláló a markolatban számol, így neked nem kell fejben követned.",
+          "on_screen_text": "100... 200... 250..."
+        },
+        {
+          "seconds": "15-20",
+          "visual": "A számláló eléri a 300-at. A nő megáll, nevet, és a kamera felé tartja a markolatot.",
+          "voiceover": "És meg is van! Furcsán jó érzés látni ezt a számot.",
+          "on_screen_text": "300 ✅"
+        },
+        {
+          "seconds": "20-25",
+          "visual": "A nő a kamerára, majd a kijelzőre mutat. Termékkép a padlón.",
+          "voiceover": "Te jössz. Válassz egy számot! Sík felületen ugorj, és figyelj a mennyezet magasságára.",
+          "on_screen_text": "Te jössz. Link lent."
+        }
+      ],
+      "caption": "Válassz egy számot, érd el a célt, és kezdd újra. Te hány ugrással indítanál? Sík felületen használd, elég hellyel a fejed fölött.",
+      "hashtags": [
+        "#ugrókötél",
+        "#otthonedzés",
+        "#kardió",
+        "#fitneszkihívás",
+        "#gadget"
+      ],
+      "cta": "Koppints a linkre, és indítsd el a saját ugrókötél-kihívásodat."
+    },
+    {
+      "lang": "hu",
+      "angle": "Small, cheap gift or stocking-stuffer fitness gadget",
+      "hook": "Kis ajándék, amit tényleg használni fognak.",
+      "shots": [
+        {
+          "seconds": "0-2",
+          "visual": "Egy kéz egy kis ajándékdobozból húzza ki az összetekert okos ugrókötelet. A háttérben ünnepi vagy szülinapi dekor.",
+          "voiceover": "Kis ajándék, amit tényleg használni fognak.",
+          "on_screen_text": "Ajándékötlet 🎁"
+        },
+        {
+          "seconds": "2-7",
+          "visual": "Közeli kép a kötélről a kezében, majd a számláló a markolaton.",
+          "voiceover": "Ez egy ugrókötél beépített számlálóval. Mutatja az ugrásokat és a becsült kalóriát, külön app nélkül.",
+          "on_screen_text": "Beépített számláló (kalória = becslés)"
+        },
+        {
+          "seconds": "7-14",
+          "visual": "Vágások: a megajándékozott lány kipróbálja otthon és ugrál. A számláló emelkedik.",
+          "voiceover": "Jó azoknak, akik szeretik az otthoni kardiót, és élvezik a számolást, követést.",
+          "on_screen_text": "Otthoni kardióhoz"
+        },
+        {
+          "seconds": "14-19",
+          "visual": "A kötél összetekerve befér egy táskába vagy egy kis dobozba.",
+          "voiceover": "Kicsi, könnyen becsomagolható, és nem kell hozzá semmi más.",
+          "on_screen_text": "Kicsi. Egyszerű. Hasznos."
+        },
+        {
+          "seconds": "19-24",
+          "visual": "Termékkép egy szalaggal átkötve. Szöveg jelenik meg a képen.",
+          "voiceover": "Sík felületen használd, és figyelj a mennyezet magasságára. Keresel valamit, ami nem unalmas ajándék?",
+          "on_screen_text": "Koppints a linkre"
+        }
+      ],
+      "caption": "Egy apró ajándék fitneszt, gadgeteket vagy otthoni mozgást kedvelőknek. A kalóriaszám csak becslés. Sík felületen használd, elég hellyel a fejed fölött.",
+      "hashtags": [
+        "#ajándékötlet",
+        "#ugrókötél",
+        "#fitnesz",
+        "#otthonedzés",
+        "#kisajándék"
+      ],
+      "cta": "Koppints a linkre, és rendeld meg az okos ugrókötelet."
+    }
+  ]
+}

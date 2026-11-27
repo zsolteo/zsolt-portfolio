@@ -29,6 +29,8 @@ python research/product_research.py --niche "home gym accessories" \
 python ads/ad_maker.py --report research_report.json --top 3 --lang en,hu
 ```
 
+Real output from a test run is in [`examples/output/`](examples/output/): 8 video ad scripts for two products, in English and Hungarian.
+
 Output goes to `ads/output/`: one Markdown file per product to read and shoot from, and one JSON file to feed into a video template or workflow.
 
 ## Status

@@ -5,3 +5,6 @@
 __pycache__/
 node_modules/
 .obsidian/workspace*.json
+ads/output/
+research_report.json
+*_report.json
